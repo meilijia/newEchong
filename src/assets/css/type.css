@@ -1,0 +1,91 @@
+.type
+    width: 100%
+    height: 100%
+  .tit
+    box-sizing: border-box
+    width: 100%
+    padding: 0 15px
+    display: flex
+    height: 0.8rem
+    line-height: 0.8rem
+    border-bottom: 1px solid #cbcbcb;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 11;
+  .t1
+    flex: 1
+    text-align: right
+    margin-right: 5%
+  .t2
+    flex: 1
+    margin-left: 5%
+  .hand
+    position: absolute
+    top: 13px
+    right: 15px
+    width: 14px
+    height: 14px
+    line-height: 14px
+  .tit a span
+    color: #000
+    font-weight: bold
+  .msg
+    width: 100%
+    height: auto
+    display:flex
+    margin-top: 0.8rem
+  .msg-list
+    width: 70px
+    overflow-y: scroll
+    position: fixed
+    top: 40px
+    left: 0
+    bottom: 0
+    margin-bottom: 1rem
+    border-right: 5px solid #f3f4f5
+  .msg-list ul
+    width: 100%
+  .msg-list ul li
+    width: 100%
+    height: .4rem
+    line-height:.4rem
+    text-align: center
+    background: #fff
+    padding: 15px 0
+    border-bottom: 1px solid #f3f4f5
+    font-size: 13px
+    text-overflow: ellipsis
+    white-space: nowrap
+  .msg-hot
+    flex: 1
+    padding-left: 75px
+    position: fixed;
+    top: 40px;
+    border-top: 5px solid #f3f4f5;
+  .msg-hot .hot1
+    background: #fff
+  .msg-hot .hot3
+    padding: 5px 5px 20px
+    border-top: 1px solid #f3f4f5
+    display:flex
+    flex-direction:column
+  .msg-hot .hot3 h3
+    height: 20px
+    line-height: 20px
+    margin-top: 10px
+    padding-left: 5px
+  .msg-hot .hot3 ul
+    flex: 1
+  .msg-hot .hot3 ul li
+    float:left
+    width: 33.33%;
+    padding: 0 5px;
+    box-sizing:border-box;
+    margin-top: 10px;
+  .msg-hot .hot3 ul li img
+    width: 100%
+  .msg-hot .hot3 ul li p
+    text-align: center
+    font-size: 10px
