@@ -4,7 +4,6 @@
       <img src="../../assets/img/new.gif" class="shopping-img">
     </div>
     <div class="shopping-day">
-      
     </div>
   </div>
 </template>

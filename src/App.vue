@@ -7,6 +7,7 @@
 
 <script>
 import IndexFooter from './components/footer'
+// import Index from './pages/index'
 export default {
   name: 'App',
   components: {
