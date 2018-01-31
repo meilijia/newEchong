@@ -6,6 +6,7 @@ import router from './router'
 import './assets/styles/base/iconfont/iconfont.css'
 import './assets/styles/base/border.css'
 import './assets/styles/base/reset.css'
+import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
 
