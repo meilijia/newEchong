@@ -1,16 +1,16 @@
 <template>
   <ul class="footer">
     <li class="footer-element">
-      <span class="footer-img"></span>
+      <router-link to="/"><span class="footer-img index-img" @click="changebg()"></span></router-link>
     </li>
     <li class="footer-element">
-      <span class="footer-img"></span>
+      <router-link to="/type"><span class="footer-img type-img" @click="changebg()"></span></router-link>
     </li>
     <li class="footer-element">
-      <span class="footer-img"></span>
+      <router-link to="/list"><span class="footer-img list-img" @click="changebg()"></span></router-link>
     </li>
     <li class="footer-element">
-      <span class="footer-img"></span>
+      <router-link to="/login"><span class="footer-img login-img" @click="changebg()"></span></router-link>
     </li>
   </ul>
 </template>
@@ -46,4 +46,12 @@ export default {
         line-height: .8rem
         background: url(../assets/img/bg.png)
         background-size: 4.68rem 3.26rem
+      .index-img
+        background-position: 0 0
+      .type-img
+        background-position: -85px 121px
+      .list-img
+        background-position: -85px 245px
+      .login-img
+        background-position: -85px 365px
 </style>
