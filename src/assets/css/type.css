@@ -59,6 +59,9 @@
     font-size: 13px
     text-overflow: ellipsis
     white-space: nowrap
+  .msg-list ul li:hover
+    color: red
+    background: #f3f4f5
   .msg-hot
     flex: 1
     padding-left: 75px

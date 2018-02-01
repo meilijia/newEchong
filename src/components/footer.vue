@@ -1,16 +1,16 @@
 <template>
   <ul class="footer">
     <li class="footer-element">
-      <router-link to="/"><span class="footer-img index-img"></span></router-link>
+      <router-link to="/" active-class = "index" exact><span class="footer-img index-img"></span></router-link>
     </li>
     <li class="footer-element">
-      <router-link to="/type"><span class="footer-img type-img"></span></router-link>
+      <router-link to="/type" active-class = "type" exact><span class="footer-img type-img"></span></router-link>
     </li>
     <li class="footer-element">
-      <router-link to="/list"><span class="footer-img list-img"></span></router-link>
+      <router-link to="/list" active-class = "list" exact><span class="footer-img list-img"></span></router-link>
     </li>
     <li class="footer-element">
-      <router-link to="/login"><span class="footer-img login-img"></span></router-link>
+      <router-link to="/login" active-class = "login" exact><span class="footer-img login-img"></span></router-link>
     </li>
   </ul>
 </template>
@@ -47,11 +47,52 @@ export default {
         background: url(../assets/img/bg.png)
         background-size: 4.68rem 3.26rem
       .index-img
-        background-position: 0 0
+        background-position: -85px 0
       .type-img
         background-position: -85px 121px
       .list-img
         background-position: -85px 245px
       .login-img
         background-position: -85px 365px
+      .index
+        display: inline-block
+        vertical-align: middle
+        margin: 0 auto
+        width: .84rem
+        height: .8rem
+        line-height: .8rem
+        background-size: 4.68rem 3.26rem
+        background-image: url(../assets/img/bg.png)
+        background-position: 0 -1px
+      .type
+        display: inline-block
+        vertical-align: middle
+        margin: 0 auto
+        width: .84rem
+        height: .8rem
+        line-height: .8rem
+        background-size: 4.68rem 3.26rem
+        background-image: url(../assets/img/bg.png)
+        background-position: 0 120px
+      .list
+        display: inline-block
+        vertical-align: middle
+        margin: 0 auto
+        width: .84rem
+        height: .8rem
+        line-height: .8rem
+        background-size: 4.68rem 3.26rem
+        background-image: url(../assets/img/bg.png)
+        background-position: 0 244px
+      .login
+        display: inline-block
+        vertical-align: middle
+        margin: 0 auto
+        width: .84rem
+        height: .8rem
+        line-height: .8rem
+        background-size: 4.68rem 3.26rem
+        background-image: url(../assets/img/bg.png)
+        background-position: 0 364px
+
 </style>
