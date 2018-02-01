@@ -5,6 +5,7 @@
       <index-swiper></index-swiper>
       <index-icons></index-icons>
       <index-shopping></index-shopping>
+      <index-brandsale></index-brandsale>
     </div>
     <index-footer class="footer"></index-footer>
   </div>
@@ -15,6 +16,7 @@ import IndexHeader from './header'
 import IndexSwiper from './swiper'
 import IndexIcons from './icons'
 import IndexShopping from './shopping'
+import IndexBrandsale from './brandsale'
 import IndexFooter from '../../components/footer'
 
 export default {
@@ -24,6 +26,7 @@ export default {
     IndexSwiper,
     IndexIcons,
     IndexShopping,
+    IndexBrandsale,
     IndexFooter
   }
 }

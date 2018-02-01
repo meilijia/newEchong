@@ -13,8 +13,14 @@
         <img src="../../assets/img/more.jpg" class="img-more">
       </div>
     </div>
-    <ul class="goods" v-for="item in goods">
-      <li></li>
+    <ul class="goods">
+      <li class="goods-list"  v-for="item in goods" :key="item.gid">
+        <div class="good-img-list">
+          <img :src="item.image.image" class="goods-img">
+        </div>
+        <p class="price">&yen;{{item.sale_price}}</p>
+        <p class="save">{{item.little_price}}</p>
+      </li>
     </ul>
   </div>
 </template>
@@ -29,9 +35,13 @@ export default {
     }
   },
   mounted () {
-    axios.get('/v3/index/main.html?pet_type=dog&version=358&is_single=0&system=wap&isWeb=1&_=1517232488654')
+    axios.get('/v3/index/main.html?do=GetDynamicV315&pet_type=dog&version=358&system=wap&isWeb=1&_=1517386543406')
       .then((res) => {
-        console.log(res)
+        // console.log(res.data.data[3].goods)
+        this.goods = res.data.data[3].goods
+      })
+      .catch(function (err) {
+        console.log(err)
       })
   }
 }
@@ -62,4 +72,35 @@ export default {
           padding: 0 .15rem
         .img-more
           width: 1.2rem
+    .goods
+      display: flex
+      overflow-x: auto
+      height: 2.9rem
+      padding: .1rem 0
+      .goods-list
+        display: flex
+        flex-direction: column
+        width: 2rem
+        height: 2.9rem
+        margin: 0 .15rem
+        .good-img-list
+          width: 1.7rem
+          height: 1.7rem
+          .goods-img
+            width: 100%
+        .price
+          width: 100%
+          height: .44rem
+          line-height: .44rem
+          margin: .15rem 0
+          text-align: center
+          font-size: .16rem
+          color: red
+        .save
+          width: 100%
+          height: .44rem
+          line-height: .44rem
+          text-align: center
+          font-size: .16rem
+          color: #999
 </style>
