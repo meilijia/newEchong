@@ -3,6 +3,7 @@
     height: 100%
   .tit
     box-sizing: border-box
+    background: #fff
     width: 100%
     padding: 0 15px
     display: flex
@@ -61,8 +62,6 @@
   .msg-hot
     flex: 1
     padding-left: 75px
-    position: fixed;
-    top: 40px;
     border-top: 5px solid #f3f4f5;
   .msg-hot .hot1
     background: #fff
@@ -86,6 +85,33 @@
     margin-top: 10px;
   .msg-hot .hot3 ul li img
     width: 100%
+    height: 100%
   .msg-hot .hot3 ul li p
     text-align: center
     font-size: 10px
+    margin-top: 0.2rem
+  .msg-hot .hot3 .brand li
+    width: 46%
+    position: relative
+    border: 1px solid #f3f4f5;
+    padding: 0 5px
+    text-align: center
+    padding: 0 5px
+    height: 55px
+    margin: 12px 2%;
+  .msg-hot .hot3 .brand
+    margin-bottom: 1rem;
+  .msg-hot .hot3 .brand li img
+    height: 45px
+    max-width: 100%
+    position: absolute
+    top: 0
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 4px;
+    vertical-align: middle;
+  .msg-hot .hot3 .brand li p
+    position: absolute
+    bottom: -20px
+    width: 100%
