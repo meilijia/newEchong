@@ -7,7 +7,7 @@
       <router-link to="/type" active-class = "type" exact><span class="footer-img type-img"></span></router-link>
     </li>
     <li class="footer-element">
-      <router-link to="/list" active-class = "list" exact><span class="footer-img list-img"></span></router-link>
+      <router-link to="/cart" active-class = "list" exact><span class="footer-img list-img"></span></router-link>
     </li>
     <li class="footer-element">
       <router-link to="/login" active-class = "login" exact><span class="footer-img login-img"></span></router-link>

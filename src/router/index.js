@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import index from '@/pages/index'
 import type from '@/pages/classify/type'
 import login from '@/pages/my/login'
-//  import list from '@/./list'
+import cart from '@/pages/cart'
+
 Vue.use(Router)
 
 export default new Router({
@@ -22,6 +23,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: login
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: cart
     }
   ]
 })
