@@ -21,7 +21,7 @@
               <h3  v-html="mtit"></h3>
               <ul class="hot-msg" >
                 <li v-for="item in imgUrl" :key="item.name" @click="goList()">
-                  <img :src="item.photo" alt="" />
+                  <router-link to="/list"><img :src="item.photo" alt="" /></router-link>
                   <p v-html="item.name"></p>
                 </li>
               </ul>
