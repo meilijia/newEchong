@@ -68,7 +68,8 @@
       <div class="loginbut"><a href="javascript:;" @click="toInd()">登  录</a></div>
     </div>
     <!--height-->
-    <div style="height: 10em;"></div>
+    <div style="height: 10em; text-align: center;
+    line-height: 10em;color: red;font-size:1.2em" class="loginmsg">{{msg}}</div>
     <!--其他登录-->
     <div class="otherlogin">
     <div class="joinweb"><b>合作网站登录</b></div>
@@ -89,7 +90,8 @@ export default {
       user: true,
       tel: false,
       username: '',
-      psw: ''
+      psw: '',
+      msg: ''
     }
   },
   methods: {
@@ -102,12 +104,18 @@ export default {
       this.tel = true
     },
     toInd: function () {
+      var that = this
       axios.post('/api/loginA', {
         username: this.username,
         psw: this.psw
       })
         .then(function (res) {
-          console.log(res)
+          that.msg = res.data.message
+          if (res.data.code === 1) {
+            setTimeout(function () {
+              location.href = '/#/'
+            }, 2000)
+          }
         })
     }
   }
