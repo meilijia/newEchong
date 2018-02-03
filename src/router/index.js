@@ -5,6 +5,7 @@ import type from '@/pages/classify/type'
 import login from '@/pages/my/login'
 import cart from '@/pages/cart'
 import list from '@/pages/list'
+import register from '@/components/register'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/list',
       name: 'list',
       component: list
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: register
     }
   ]
 })
