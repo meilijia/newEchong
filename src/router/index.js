@@ -4,6 +4,7 @@ import index from '@/pages/index'
 import type from '@/pages/classify/type'
 import login from '@/pages/my/login'
 import cart from '@/pages/cart'
+import register from '@/components/register'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/cart',
       name: 'cart',
       component: cart
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: register
     }
   ]
 })

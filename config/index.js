@@ -17,6 +17,10 @@ module.exports = {
             pathRewrite: {
             '^/v3': '/v3'
             }
+        },
+        '/api': {
+            target: 'http://localhost:3000',
+            changeOrigin: true
         }
     },
 
