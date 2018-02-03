@@ -2,21 +2,18 @@
   <div>
     <list></list>
     <brand></brand>
-    <index-footer class="footer"></index-footer>
   </div>
 </template>
 
 <script>
 import List from './list'
 import Brand from './brand'
-import IndexFooter from '../../components/footer'
 
 export default {
   name: 'index',
   components: {
     List,
-    Brand,
-    IndexFooter
+    Brand
   }
 }
 </script>
