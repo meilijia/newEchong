@@ -27,7 +27,7 @@
             <ul class="mform">
               <li>
                 <span class="iconfont icf">&#xe600;</span>
-                <input type="text" id="username" placeholder="手机号/邮箱/用户名" />
+                <input type="text" v-model="username" placeholder="手机号/邮箱/用户名" />
               </li>
             </ul>
           </div>
@@ -35,7 +35,7 @@
             <ul class="mform">
               <li>
                 <span class="iconfont icf">&#xe61b;</span>
-                <input type="text" id="psw" placeholder="输入密码" />
+                <input type="text" v-model ="psw" placeholder="输入密码" />
               </li>
             </ul>
           </div>
@@ -65,10 +65,11 @@
         <div class="clear" style="clear: both;"></div>
       </div>
       <!--登录按钮-->
-      <div class="loginbut"><a href="">登  录</a></div>
+      <div class="loginbut"><a href="javascript:;" @click="toInd()">登  录</a></div>
     </div>
     <!--height-->
-    <div style="height: 10em;"></div>
+    <div style="height: 10em; text-align: center;
+    line-height: 10em;color: red;font-size:1.2em" class="loginmsg">{{msg}}</div>
     <!--其他登录-->
     <div class="otherlogin">
     <div class="joinweb"><b>合作网站登录</b></div>
@@ -81,12 +82,16 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'login',
   data () {
     return {
       user: true,
-      tel: false
+      tel: false,
+      username: '',
+      psw: '',
+      msg: ''
     }
   },
   methods: {
@@ -97,6 +102,21 @@ export default {
     changeMethods2: function () {
       this.user = false
       this.tel = true
+    },
+    toInd: function () {
+      var that = this
+      axios.post('/api/loginA', {
+        username: this.username,
+        psw: this.psw
+      })
+        .then(function (res) {
+          that.msg = res.data.message
+          if (res.data.code === 1) {
+            setTimeout(function () {
+              location.href = '/#/'
+            }, 2000)
+          }
+        })
     }
   }
 }
