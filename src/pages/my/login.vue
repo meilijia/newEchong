@@ -90,17 +90,8 @@ export default {
       user: true,
       tel: false,
       username: '',
-<<<<<<< HEAD
       psw: '',
       msg: ''
-=======
-<<<<<<< HEAD
-      psw: '',
-      msg: ''
-=======
-      psw: ''
->>>>>>> f46c225e36e333e3c706b68a607b966cba41cf4c
->>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
     }
   },
   methods: {
@@ -113,35 +104,19 @@ export default {
       this.tel = true
     },
     toInd: function () {
-<<<<<<< HEAD
       var that = this
-=======
-<<<<<<< HEAD
-      var that = this
-=======
->>>>>>> f46c225e36e333e3c706b68a607b966cba41cf4c
->>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
       axios.post('/api/loginA', {
         username: this.username,
         psw: this.psw
       })
         .then(function (res) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
           that.msg = res.data.message
           if (res.data.code === 1) {
             setTimeout(function () {
               location.href = '/#/'
             }, 2000)
           }
-<<<<<<< HEAD
-=======
-=======
           console.log(res)
->>>>>>> f46c225e36e333e3c706b68a607b966cba41cf4c
->>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
         })
     }
   }

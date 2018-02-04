@@ -20,13 +20,8 @@
             <div class="hot3">
               <h3  v-html="mtit"></h3>
               <ul class="hot-msg" >
-<<<<<<< HEAD
                 <li v-for="item in imgUrl" :key="item.id_param">
                   <router-link :to="{name:'list',query:{fid: item.id_param}}"><img :src="item.photo" alt="" /></router-link>
-=======
-                <li v-for="item in imgUrl" :key="item.name" @click="goList()">
-                  <router-link to="/list"><img :src="item.photo" alt="" /></router-link>
->>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
                   <p v-html="item.name"></p>
                 </li>
               </ul>

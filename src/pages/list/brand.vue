@@ -14,16 +14,11 @@
               <i class="item-sold">{{item.sold}}</i>
             </span>
           </div>
-<<<<<<< HEAD
           <div class="addcart" @click="addToCart(item)">
-=======
-          <div class="addcart">
->>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
             <img src="../../assets/img/addcart.png" class="addcart-img">
           </div>
       </li>
     </ul>
-<<<<<<< HEAD
     <div class="addbuy" v-if='seen'>
       <div class="hd"></div>
       <div class="bd">成功添加到购物车！</div>
@@ -33,8 +28,6 @@
       </div>
     </div>
     <div class="shade" v-if='seen'></div>
-=======
->>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
   </div>
 </template>
 
@@ -44,7 +37,6 @@ export default {
   name: 'brand',
   data () {
     return {
-<<<<<<< HEAD
       list: [],
       seen: false
     }
@@ -68,13 +60,6 @@ export default {
     // 获取id
     // console.log(ids)
     axios.get(`/v3/goods/list/main.html?version=355&brandid=0&page=1&orderby=def_desc&cateid=${ids}&pet_type=dog&extend_pam=&real_wid=&region=&system=wap&isWeb=1&_=1517300952132`)
-=======
-      list: []
-    }
-  },
-  mounted () {
-    axios.get('/v3/goods/list/main.html?version=355&brandid=0&page=1&orderby=def_desc&cateid=413&pet_type=dog&extend_pam=&real_wid=&region=&system=wap&isWeb=1&_=1517300952132')
->>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
       .then((res) => {
         var arr = []
         // console.log(res.data.list[0].comments)
@@ -86,11 +71,6 @@ export default {
           this.list = arr
           // console.log(this.list[i])
         }
-<<<<<<< HEAD
-        // console.log(this.list)
-=======
-        // console.log(this.list.comments)
->>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
       })
   }
 }
@@ -155,7 +135,6 @@ export default {
         height: .6rem
         .addcart-img
           width: 100%
-<<<<<<< HEAD
   .addbuy
     margin: 0
     top: 45%
@@ -219,6 +198,4 @@ export default {
     left: 0;
     bottom: 0;
     background: rgba(0,0,0,.6);
-=======
->>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
 </style>
