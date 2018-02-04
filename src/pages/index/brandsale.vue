@@ -34,7 +34,8 @@ export default {
         this.food = arr
         var img = []
         for (var i in arr) {
-          if (!(i % 2)) {
+          // eslint-disable-next-line
+          if (!(i % 2) && i != 0) {
             // console.log(i)
             // console.log(arr[i].content_images[0][0].image)
             img.push(arr[i].content_images[0][0])

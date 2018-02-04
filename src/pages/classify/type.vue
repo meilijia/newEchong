@@ -20,8 +20,8 @@
             <div class="hot3">
               <h3  v-html="mtit"></h3>
               <ul class="hot-msg" >
-                <li v-for="item in imgUrl" :key="item.name" @click="goList()">
-                  <img :src="item.photo" alt="" />
+                <li v-for="item in imgUrl" :key="item.id_param">
+                  <router-link :to="{name:'list',query:{fid: item.id_param}}"><img :src="item.photo" alt="" /></router-link>
                   <p v-html="item.name"></p>
                 </li>
               </ul>
@@ -58,7 +58,9 @@ export default {
       brand: [],
       btit: '',
       goodsId: [],
-      id: 88888
+      id: 88888,
+      listId: [],
+      lId: 0
     }
   },
   mounted: function () {
@@ -88,12 +90,14 @@ export default {
       // 右边内容部分
       axios.get(`/v3/goods/category/main.html?do=getChildren&owner=${this.id}&pet_type=dog&system=wap&isWeb=1&version=303&_=1517220938674`)
         .then((res) => {
-          // console.log(res.data.cate_list[1])
+          // 传给列表页的id
           // console.log(res.data.cate_list[0])
           this.mtit = res.data.cate_list[0].title
           for (let i in res.data.cate_list[0].list) {
             this.imgUrl = this.imgUrl.concat(res.data.cate_list[0].list[i])
-          // console.log(this.imgUrl)
+            // console.log(this.imgUrl)
+            this.listId = res.data.cate_list[0].list[i].id_param
+            // console.log(this.listId)
           }
           if (res.data.cate_list[1]) {
             this.btit = res.data.cate_list[1].title
@@ -107,12 +111,14 @@ export default {
         // console.log(this.imgUrl)
         })
     },
-    goList: function () {
-      axios.get('/v3/goods/list/main.html?version=355&brandid=0&page=1&orderby=def_desc&cateid=413&pet_type=dog&extend_pam=&real_wid=&region=&system=wap&isWeb=1&_=1517300952132')
-        .then((res) => {
-          console.log(res)
-        })
+    setListId: function (b) {
+      this.lId = b
+      this.goList(this.lId)
     }
+    // goList: function (lid) {
+    //   console.log(lid)
+    //   this.$router.history.push({path:'list',params:{id: lid}})
+    // }
   }
 }
 </script>
