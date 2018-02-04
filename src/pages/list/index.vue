@@ -15,9 +15,12 @@ export default {
     List,
     Brand
   }
+<<<<<<< HEAD
   // mounted () {
   //   console.log(this.$route.params.id)
   // }
+=======
+>>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
 }
 </script>
 

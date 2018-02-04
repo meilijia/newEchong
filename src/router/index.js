@@ -32,7 +32,11 @@ export default new Router({
       component: cart
     },
     {
+<<<<<<< HEAD
       path: '/list/:fid',
+=======
+      path: '/list',
+>>>>>>> 9c994fa0b53d1b23b3a22e18bbda735d8bed5c54
       name: 'list',
       component: list
     },
